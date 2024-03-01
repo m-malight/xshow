@@ -1,33 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-color-dark: rgb(2 6 23);
+  color: white;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-color-dark);
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* Hide both vertical and horizontal scrollbars */
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* For Chrome and Safari */
+.scrollable-container::-webkit-scrollbar-thumb {
+  display: none; /* Hide the thumb */
+}
+
+/* For Firefox */
+.scrollable-container {
+  scrollbar-width: none;
+}
+
+/* For Firefox */
+.scrollable-container::-webkit-scrollbar-thumb {
+  display: none; /* Hide the thumb */
 }
