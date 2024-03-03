@@ -55,7 +55,7 @@ export default function Home(): React.JSX.Element {
     <></>
   ) : (
     <Scaffold activeIcon={state_prototype} activateSearch={handle_search}>
-      <div className="mb-24">
+      <div>
         {searchInitiated ? (
           data.length === 0 ? (
             <p>No movie found</p>

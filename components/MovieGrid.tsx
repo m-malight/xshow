@@ -18,7 +18,7 @@ function MovieGrid({
   return (
     <div>
       {heading && <h2 className="ml-4">{heading}</h2>}
-      <div className="flex flex-wrap scrollable-container h-[auto]">
+      <div className="flex flex-wrap scrollable-container h-[auto] border-2 border-red-400">
         {photos &&
           photos.map((photo) => (
             <div
